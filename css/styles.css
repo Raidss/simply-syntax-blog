@@ -7,29 +7,42 @@ body {
 .parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin-left: 10%;
     margin-right: 10%;
     }
     
-    .div1 { grid-area: 1 / 1 / 3 / 4; text-align: center; }
-    .div2 { grid-area: 3 / 1 / 4 / 2; text-align: center; }
-    .div3 { grid-area: 3 / 2 / 4 / 3; text-align: center; }
-    .div4 { grid-area: 3 / 3 / 4 / 4; text-align: center; }
-    .div5 { grid-area: 4 / 1 / 5 / 2; text-align: center; }
-    .div6 { grid-area: 4 / 2 / 5 / 3; text-align: center; }
-    .div7 { grid-area: 4 / 3 / 5 / 4; text-align: center; }
+    .div1 { grid-area: 1 / 1 / 3 / 4; text-align: center; overflow: hidden; }
+    .div2 { grid-area: 3 / 1 / 4 / 2; text-align: center; overflow: hidden;  }
+    .div3 { grid-area: 3 / 2 / 4 / 3; text-align: center; overflow: hidden;  }
+    .div4 { grid-area: 3 / 3 / 4 / 4; text-align: center; overflow: hidden;  }
+    .div5 { grid-area: 4 / 1 / 5 / 2; text-align: center; overflow: hidden;  }
+    .div6 { grid-area: 4 / 2 / 5 / 3; text-align: center; overflow: hidden;  }
+    .div7 { grid-area: 4 / 3 / 5 / 4; text-align: center; overflow: hidden;  }
 
 
 .outline {
+    border: 0px;
+    border-style: dashed;
+    border-color: black;
+    das
+}
+
+.article {
+    margin-right: 10px;
+    margin-bottom: 10px;
     border: 1px;
     border-style: dashed;
     border-color: black;
-    
 }
 
+ 
+
+#article-header {
+    display: inline-block;
+}
 
 
 #main-header-text {
@@ -50,7 +63,7 @@ body {
     position: relative;
     width: 35%;
     float: right;
-    margin-top: 5%
+    margin-top: 5%;
 }
 
 #side-nav-list {
@@ -59,10 +72,12 @@ body {
     text-align: unset;
     text-align: left;
     margin-top: 0;
+    width: 50%;
 }
 
 .nav-link {
     margin-bottom: 15px;
+
 }
 
 .nav-text-link {
