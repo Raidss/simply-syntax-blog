@@ -1,17 +1,16 @@
 body {
     color: white;
     background-color: #2A2B2A;
+    display: flex;
+    justify-content: center;
 }
 
 
 .parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin-left: 10%;
-    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75vw;
     }
     
     .div1 { grid-area: 1 / 1 / 3 / 4; text-align: center; overflow: hidden; }
@@ -23,11 +22,17 @@ body {
     .div7 { grid-area: 4 / 3 / 5 / 4; text-align: center; overflow: hidden;  }
 
 
+.articles-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .outline {
     border: 0px;
     border-style: dashed;
     border-color: black;
-    das
+    
 }
 
 .article {
@@ -36,22 +41,35 @@ body {
     border: 1px;
     border-style: dashed;
     border-color: black;
+    width: 33%;
 }
 
- 
 
 #article-header {
-    display: inline-block;
+    display: flex;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 
 #main-header-text {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
     margin-right: 15%;
     margin-top: 5%;
     width: 45%;
     font-size: 300%;
+}
+
+.runtime {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .color-text {
@@ -59,10 +77,8 @@ body {
 }
 
 #side-nav-box {
-    display: inline-block;
     position: relative;
-    width: 35%;
-    float: right;
+    width: 25%;
     margin-top: 5%;
 }
 
