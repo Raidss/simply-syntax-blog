@@ -1,3 +1,4 @@
+const counterText = document.querySelector('.counter-text')
 const onSiteLink = document.querySelector(".onsite");
 const onSiteLinkText = onSiteLink.textContent;
 let counter = -1;
@@ -9,7 +10,8 @@ setTimeout(function() {
 }, 2000)
 
 function updateText() {
-    onSiteLink.textContent = "You're already here " + counter;
+    onSiteLink.textContent = "You're already here";
+    counterText.textContent = " " + counter;
     counter--;
     if (counter > -1) {
         setTimeout(function() {
@@ -17,6 +19,7 @@ function updateText() {
         } , 1000)
     } else {
         onSiteLink.textContent = onSiteLinkText;
+        counterText.textContent = "";
         counter = 3;
     }
 }
