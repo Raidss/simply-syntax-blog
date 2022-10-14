@@ -1,8 +1,12 @@
 const onSiteLink = document.querySelector(".onsite");
 const onSiteLinkText = onSiteLink.textContent;
-let counter = 3;
+let counter = -1;
 
-onSiteLink.addEventListener('mouseover', updateText);
+
+setTimeout(function() {
+    onSiteLink.addEventListener('mouseover', updateText);
+    counter = 3;
+}, 2000)
 
 function updateText() {
     onSiteLink.textContent = "You're already here " + counter;
