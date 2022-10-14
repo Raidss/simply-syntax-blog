@@ -24,7 +24,7 @@ function updateText() {
         counter = 3;
     }
 }
-
+// End
 // Page runtime 
 const runtimeText = document.querySelector('.runtime');
 let runtimeCounter = 0;
@@ -38,7 +38,6 @@ function loopStart() {
     setInterval (timerLoop, 10)
 }
 
-
 function timerLoop() {
     runtimeText.textContent = "Page runtime: " + runTimeMinutes + ":" + runTimeSeconds + ":" + runTime10thSeconds + runTime100thSeconds;
     runtimeCounter++;
@@ -49,18 +48,20 @@ function timerLoop() {
         runtimeCounter = 0;
     }
 
-    if (runTime100thSeconds === 9) { //checks for 100th place seconds
+    if (runTime100thSeconds === 10) { //checks for 100th place seconds
         runTime10thSeconds++;
         runTime100thSeconds = 0; // resets 100th place seconds
     }
-    if (runTime10thSeconds === 9) { //checks for 10th place seconds
+    if (runTime10thSeconds === 10) { //checks for 10th place seconds
         runTimeSeconds++;
         runTime10thSeconds = 0; // resets 10th place seconds
     }
-    if (runTimeSeconds === 59) { //checks for Seconds
+    if (runTimeSeconds === 60) { //checks for Seconds
         runTimeMinutes++;
         runTimeSeconds = 0; // resets seconds
     }
 }
 
 loopStart();
+
+//End
