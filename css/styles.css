@@ -24,7 +24,8 @@ body {
 
 .articles-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -41,7 +42,7 @@ body {
     border: 1px;
     border-style: dashed;
     border-color: black;
-    width: 33%;
+    width: 30%;
 }
 
 
