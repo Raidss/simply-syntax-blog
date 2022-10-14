@@ -47,6 +47,7 @@ body {
 
 #article-header {
     display: flex;
+    justify-content: center;
 }
 
 .header-container {
