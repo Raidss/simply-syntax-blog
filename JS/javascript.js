@@ -39,7 +39,7 @@ function loopStart() {
 }
 
 function timerLoop() {
-    runtimeText.textContent = "Page runtime: " + runTimeMinutes + ":" + runTimeSeconds + ":" + runTime10thSeconds + runTime100thSeconds;
+    runtimeText.textContent = `Page runtime: ${runTimeMinutes}:${runTimeSeconds}:${runTime10thSeconds}${runTime100thSeconds}`;
     runtimeCounter++;
     if (runtimeCounter <= 9) { // checks for ms timer
         timerLoop();
